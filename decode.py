@@ -26,4 +26,7 @@ for i in range(len(instr)):
     current_char = char_dict[current_word]
     outstr += current_char
 
-print(outstr)
+outstr = outstr.replace('¶', '\n')
+
+outfile = open('output.txt', 'w')
+outfile.write(outstr)
